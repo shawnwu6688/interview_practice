@@ -1,5 +1,6 @@
 package collections;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +17,10 @@ import java.util.concurrent.*;
  * @Copyright: 2021  Inc. All rights reserved.
  * @TODO: 注意, 本文件Shawn Wu 所作,如果转载或使用请标明具体出处!
  **/
-public class Test01 {
+public class Test01 implements Serializable {
+
+    private static final long serialVersionUID = -1345731565977279124L;
+
     public static void main(String[] args) {
         HashMap<Object, Object> map = new HashMap<>();
         Map<Object, Object> map1 = Collections.synchronizedMap(map);
@@ -24,5 +28,6 @@ public class Test01 {
         //cMap.put()
         ExecutorService pool = Executors.newCachedThreadPool();
         //每天都要提交git代码
+
     }
 }
