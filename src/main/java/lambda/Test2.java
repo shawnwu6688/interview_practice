@@ -1,5 +1,8 @@
 package lambda;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.function.Consumer;
@@ -19,12 +22,13 @@ import java.util.function.Supplier;
  * @TODO: 函数式接口练习!
  **/
 public class Test2 {
-    public static Comparator<String> stringComparator() {
+    @Contract(pure = true)
+    public static @NotNull Comparator<String> stringComparator() {
 
         return (a, b) -> a.length() - b.length();
     }
 
-    private static String testSupplier(Supplier<String> supply) {
+    private static String testSupplier(@NotNull Supplier<String> supply) {
         return supply.get();
     }
 
