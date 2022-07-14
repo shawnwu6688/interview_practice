@@ -13,7 +13,21 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
     <dependencies>
-
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka</artifactId>
+            <version>0.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.netflix-commons</groupId>
+            <artifactId>netflix-infix</artifactId>
+            <version>0.3.0</version>
+        </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
